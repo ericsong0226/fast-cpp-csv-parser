@@ -1048,7 +1048,7 @@ template <class overflow_policy, class T> void parse(char *col, T &x) {
 } // namespace detail
 
 template <unsigned column_count, class trim_policy = trim_chars<' ', '\t'>,
-          class quote_policy = no_quote_escape<','>,
+          class quote_policy = double_quote_escape<',', '"'>,
           class overflow_policy = throw_on_overflow,
           class comment_policy = no_comment>
 class CSVReader {
